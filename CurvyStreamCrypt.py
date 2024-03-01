@@ -81,22 +81,7 @@ def decrypt(encrypted_msg, private_key):
     encrypted_msg = [bytes.fromhex(encrypted_msg[0])] + [decompress_to_point(curve,encrypted_msg[1])]
     return decrypt_ecc(encrypted_msg, private_key)
 
-<<<<<<< Updated upstream:CurvyStreamCrypt.py
-def encrypt(msg, pubKey):
-    encryptedMsg = encrypt_ECC(msg, pubKey)
-    encryptedMsg = [encryptedMsg[0].hex()] + [compress_point(encryptedMsg[1])]
-    return ','.join(encryptedMsg)
-
-# EXAMPLE USAGE
-privKey = create_pivate_key()
-pubKey = create_public_key(privKey)
-
-emsg = encrypt(b'testingggggggg', pubKey)
-
-dmsg = decrypt(emsg, privKey)
-=======
 def encrypt(msg, public_key):
     encrypted_msg = encrypt_ecc(msg, public_key)
     encrypted_msg = [encrypted_msg[0].hex()] + [compress_point(encrypted_msg[1])]
     return ','.join(encrypted_msg)
->>>>>>> Stashed changes:curvystreamcrypt.py
