@@ -14,12 +14,13 @@ CurvyStreamCrypt is a hybrid encryption system that combines my BLAKE3-based Str
 - NumMaster
 - TinyEC
 - NumPy
+- blake3
 
 ## Installation
 To use CurvyStreamCrypt, ensure you have Python installed on your system. Then, install the required Python packages using pip:
 
 ```bash
-pip install nummaster tinyec numpy
+pip install nummaster tinyec numpy blake3
 ```
 
 ## Usage
